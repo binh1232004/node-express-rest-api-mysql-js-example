@@ -1,7 +1,9 @@
 const dotenv = require('dotenv');
 
+// Always load .env file first
+dotenv.config();
+
 const NODE_ENV = process.env.NODE_ENV || 'development';
-if (NODE_ENV === 'development') dotenv.config();
 
 const config = require('config');
 const PORT = config.get('PORT');
