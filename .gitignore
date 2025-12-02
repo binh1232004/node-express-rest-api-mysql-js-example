@@ -14,3 +14,11 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Terraform AWS Infrastructure
+terraform-aws-infrastructure/.terraform/
+terraform-aws-infrastructure/.terraform.lock.hcl
+terraform-aws-infrastructure/terraform.tfstate
+terraform-aws-infrastructure/terraform.tfstate.backup
+terraform-aws-infrastructure/*.tfvars
+!terraform-aws-infrastructure/terraform.tfvars.example

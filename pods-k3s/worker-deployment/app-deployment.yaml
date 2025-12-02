@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nodejs-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-nodejs-app
+  template:
+    metadata:
+      labels:
+        app: my-nodejs-app
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: worker-54-254-189-226
+      containers:
+      - name: nodejs
+        image: ghcr.io/binh1232004/node-express-rest-api-mysql-js-example:main
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 3000
